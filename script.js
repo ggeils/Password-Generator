@@ -83,9 +83,11 @@ let userChoice;
 
 
 function generatePassword() {
+    // Initial prompt
   let lengthChoice = prompt("Please choose a length between 8-128 characters.");
   console.log("Chosen length: " + lengthChoice);
 
+  // Checks length to ensure parameters are met.
   if (lengthChoice < 8 || lengthChoice > 128) {
     lengthChoice = prompt("You must choose a length between 8-128 characters!");
   } else {
@@ -176,6 +178,7 @@ function generatePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Writes the passwrod to the screen.
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
