@@ -119,53 +119,53 @@ function generatePassword() {
     // Three options
   } else if (confirmUpper && confirmNumber && confirmSpecial) {
     userChoice = upperCase.concat(numbers, specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmLower && confirmUpper && confirmSpecial) {
     userChoice = lowerCase.concat(upperCase, specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmLower && confirmNumber && confirmSpecial) {
     userChoice = lowerCase.concat(numbers, specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmLower && confirmUpper && confirmNumber) {
     userChoice = lowerCase.concat(upperCase, numbers);
-    console.log(userChoices);
+    console.log(userChoice);
     // Two options
   } else if (confirmLower && confirmSpecial) {
     userChoice = lowerCase.concat(specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmNumber && confirmSpecial) {
     userChoice = numbers.concat(specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmLower && confirmUpper) {
     userChoice = lowerCase.concat(upperCase);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmUpper && confirmNumber) {
     userChoice = upperCase.concat(numbers);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmUpper && confirmSpecial) {
     userChoice = upperCase.concat(specialChars);
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmLower && confirmNumber) {
     userChoice = lowerCase.concat(numbers);
-    console.log(userChoices);
+    console.log(userChoice);
   }
   // One option
   else if (confirmLower) {
     userChoice = lowerCase;
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmUpper) {
     userChoice = upperCase
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmNumber) {
     userChoice = numbers;
-    console.log(userChoices);
+    console.log(userChoice);
   } else if (confirmSpecial) {
     userChoice = special;
-    console.log(userChoices);
+    console.log(userChoice);
   }
 
-  for (let i = 0; i < passwordLength; i++) {
-    let allChoices = userChoices[Math.floor(Math.random() * userChoice.length)];
+  for (let i = 0; i < lengthChoice; i++) {
+    let allChoices = userChoice[Math.floor(Math.random() * userChoice.length)];
     resultChars.push(allChoices);
     console.log(allChoices);
   }
